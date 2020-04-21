@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://Font/Ubuntu-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 15
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonUp" type="Button" parent="."]
+anchor_left = -0.00089097
+anchor_top = 0.00100611
+anchor_right = -0.00089097
+anchor_bottom = 0.00100611
+margin_right = 60.0
+margin_bottom = 60.0
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLeft" type="Button" parent="."]
+anchor_left = -0.00089097
+anchor_top = 0.0010061
+anchor_right = -0.00089097
+anchor_bottom = 0.0010061
+margin_left = -60.0
+margin_top = 120.0
+margin_bottom = 180.0
+rect_rotation = -90.0
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDown" type="Button" parent="."]
+anchor_left = -0.00089097
+anchor_top = 0.0010061
+anchor_right = -0.00089097
+anchor_bottom = 0.0010061
+margin_left = 60.0
+margin_top = 180.0
+margin_right = 120.0
+margin_bottom = 240.0
+rect_rotation = 180.0
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRight" type="Button" parent="."]
+anchor_left = -0.00089097
+anchor_top = 0.0010061
+anchor_right = -0.00089097
+anchor_bottom = 0.0010061
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 120.0
+rect_rotation = 90.0
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="ButtonUp" to="." method="_on_ButtonUp_button_down"]
+[connection signal="button_up" from="ButtonUp" to="." method="_on_ButtonUp_button_up"]
+[connection signal="button_down" from="ButtonLeft" to="." method="_on_ButtonLeft_button_down"]
+[connection signal="button_up" from="ButtonLeft" to="." method="_on_ButtonLeft_button_up"]
+[connection signal="button_down" from="ButtonDown" to="." method="_on_ButtonDown_button_down"]
+[connection signal="button_up" from="ButtonDown" to="." method="_on_ButtonDown_button_up"]
+[connection signal="button_down" from="ButtonRight" to="." method="_on_ButtonRight_button_down"]
+[connection signal="button_up" from="ButtonRight" to="." method="_on_ButtonRight_button_up"]

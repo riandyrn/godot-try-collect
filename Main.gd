@@ -34,3 +34,33 @@ func _on_Collectible_collected():
 		
 
 
+func _on_Control_move_down():
+	$Player.move_down()
+
+
+func _on_Control_move_left():
+	$Player.move_left()
+
+
+func _on_Control_move_right():
+	$Player.move_right()
+
+
+func _on_Control_move_up():
+	$Player.move_up()
+
+
+func _on_Control_stop_down():
+	$Player.stop_down()
+
+
+func _on_Control_stop_left():
+	$Player.stop_left()
+
+
+func _on_Control_stop_right():
+	$Player.stop_right()
+
+
+func _on_Control_stop_up():
+	$Player.stop_up()

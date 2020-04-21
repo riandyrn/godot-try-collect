@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Collectible.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
 [ext_resource path="res://Audio/coin.ogg" type="AudioStream" id=4]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Control.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -13,9 +14,23 @@ collectible = ExtResource( 2 )
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 510.267, 299.438 )
+position = Vector2( 403.081, 299.438 )
 scale = Vector2( 0.9, 0.9 )
 
 [node name="CoinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
+[node name="Control" parent="." instance=ExtResource( 6 )]
+margin_left = 870.674
+margin_top = 429.617
+margin_right = 870.674
+margin_bottom = 429.617
 [connection signal="replay" from="HUD" to="." method="_on_HUD_replay"]
+[connection signal="move_down" from="Control" to="." method="_on_Control_move_down"]
+[connection signal="move_left" from="Control" to="." method="_on_Control_move_left"]
+[connection signal="move_right" from="Control" to="." method="_on_Control_move_right"]
+[connection signal="move_up" from="Control" to="." method="_on_Control_move_up"]
+[connection signal="stop_down" from="Control" to="." method="_on_Control_stop_down"]
+[connection signal="stop_left" from="Control" to="." method="_on_Control_stop_left"]
+[connection signal="stop_right" from="Control" to="." method="_on_Control_stop_right"]
+[connection signal="stop_up" from="Control" to="." method="_on_Control_stop_up"]
