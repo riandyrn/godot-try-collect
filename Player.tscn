@@ -14,17 +14,16 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21.3206, 26.6686 )
+extents = Vector2( 26.1743, 32.9044 )
 
 [node name="Player" type="Area2D"]
 script = ExtResource( 4 )
 SPEED = 300
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 1 )
 animation = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.49906e-05, 12.1342 )
+position = Vector2( 1.50204e-05, 15.1342 )
 shape = SubResource( 2 )

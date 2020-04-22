@@ -13,8 +13,8 @@ collectible = ExtResource( 2 )
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 510.267, 299.438 )
-scale = Vector2( 0.9, 0.9 )
+position = Vector2( 648.812, 343.925 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="CoinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

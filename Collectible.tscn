@@ -7,6 +7,7 @@
 extents = Vector2( 5.77951, 5.76923 )
 
 [node name="Collectible" type="Area2D"]
+scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

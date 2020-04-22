@@ -10,7 +10,7 @@ func _ready():
 	_on_HUD_replay()
 	
 func _on_HUD_replay():
-	$Player.scale = Vector2(1, 1)
+	$Player.scale = Vector2(1.3, 1.3)
 	$Player.start_player()
 	current_num_collectibles = num_collectibles
 	screen_size = get_viewport_rect().size
